@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <Button android:id="@+id/btnHistory" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="History" />
+        <Button android:id="@+id/btnDownloads" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Downloads" />
+    </LinearLayout>
+
+    <EditText android:id="@+id/etUrl" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Paste .m3u8 URL here" android:inputType="textUri" android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <Button android:id="@+id/btnPlay" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Play" />
+        <Button android:id="@+id/btnDownload" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Download" />
+    </LinearLayout>
+
+    <androidx.media3.ui.PlayerView android:id="@+id/playerView" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="16dp" />
+</LinearLayout>
